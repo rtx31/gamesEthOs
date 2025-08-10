@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+#gameContainer {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+}
+
+#gameCanvas {
+    background: linear-gradient(#1a1a1a, #0d0d0d);
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #444;
+}
+
+/* Scoreboard */
+#scoreBoard {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Jump button for mobile */
+#jumpButton {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    padding: 12px 20px;
+    font-size: 18px;
+    background-color: #ff9800;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+#jumpButton:active {
+    background-color: #e68900;
+}
