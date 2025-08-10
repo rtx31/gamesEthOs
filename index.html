@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Runner Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        <div id="scoreBoard">
+            <span>Score: <span id="score">0</span></span>
+            <span>Coins: <span id="coins">0</span></span>
+        </div>
+        <button id="jumpButton">Jump</button>
+    </div>
+    
+    <audio id="bgMusic" src="music.wav" loop></audio>
+    <audio id="jumpSound" src="jump.wav"></audio>
+    <audio id="coinSound" src="coin.wav"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
