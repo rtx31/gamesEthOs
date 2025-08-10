@@ -1,0 +1,28 @@
+import numpy as np
+import wave
+
+# Parameter musik
+duration = 15  # detik
+sample_rate = 44100
+freqs = [261.63, 329.63, 392.00]  # C, E, G
+volume = 0.2
+
+# Buat nada looping
+t = np.linspace(0, duration, int(sample_rate * duration), False)
+music = np.zeros_like(t)
+
+for i, freq in enumerate(freqs):
+    music += np.sin(2 * np.pi * freq * t + i) * volume
+
+# Normalisasi
+music = (music / np.max(np.abs(music)) * 32767).astype(np.int16)
+
+# Simpan file WAV
+output_music_path = "/mnt/data/bgMusic.wav"
+with wave.open(output_music_path, "w") as wav_file:
+    wav_file.setnchannels(1)
+    wav_file.setsampwidth(2)
+    wav_file.setframerate(sample_rate)
+    wav_file.writeframes(music.tobytes())
+
+output_music_path
